@@ -1,0 +1,143 @@
+  body {
+            height: 100%;
+            background-image: url("snow.jpg");
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+        }
+
+        *:focus {
+            /* outline: none;  */
+            box-shadow: none !important;
+        }
+
+        .fontcolor {
+            color: rgb(0, 175, 175);
+        }
+
+        .color {
+            background-color: rgba(0, 175, 175, 0.8);
+        }
+
+        .contentCenter {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .contentLeft{
+            text-align: left;
+        }
+
+        input {
+            height: 2vmax;
+
+        }
+
+        .bdLeftRadius {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .bdRightRadius {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        h3 {
+            font-size: 2em;
+            margin-top: 8%;
+            font-family: "Arial Black", Gadget, sans-serif;
+        }
+
+        h6 {
+            font-size: 0.8em;
+            line-height: 1.5rem;
+            font-family: "Arial", Gadget, sans-serif;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        button {
+            font-size: 0.6em !important;
+            height: 3.6em;
+            width: 100%;
+            cursor:pointer;
+  
+            transition:box-shadow 0.2s ease-out;
+            
+            &:hover{
+                box-shadow:0px 0px 15px lightgrey;
+            }
+            &:active {
+                box-shadow:0px 0px 10px red;
+            }
+           
+        }
+
+        .divheight100 {
+            height: 100%;
+
+        }
+        #Loginalert{
+            font-size: 0.8em;
+            display: none;
+            margin-top: 25px;
+            line-height: 1.3em !important;
+        }
+        #alertbtn{
+            margin-top: -6px;
+            font-size: 26px !important;
+            height: 30px;
+            
+        }
+       
+
+        @media only screen and (max-width: 576px) {
+
+            div[class*="col-"] {
+                border-radius: 15px;
+            }
+            .m-d-block {
+
+                display: block !important;
+            }
+            .m-d-none {
+                display: none;
+            }
+
+            #side1,
+            #side2 {
+                height: 220px;
+
+            }
+            .contentCenter{
+                align-items: unset;
+            }
+            /* 
+            .wrapper {
+                display: flex;
+                flex-direction: column-reverse;
+            } */
+            
+
+            h3 {
+                position:relative;
+                margin-top: 0%;
+            }
+            #Loginalert{
+                font-size: 0.8em;  
+                margin-top: 0px;             
+            }
+        }
+
+        .section {
+            overflow:hidden;
+            transition:transform 0.3s ease-out; // note that we're transitioning transform, not height!
+            height:auto;
+            transform:scaleY(1); // implicit, but good to specify explicitly
+            transform-origin:top; // keep the top of the element in the same place. this is optional.
+          }
+          .section.collapsed {
+            transform:scaleY(0); // *squish*
+          }

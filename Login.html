@@ -1,0 +1,461 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/2581b41ed9.js" crossorigin="anonymous"></script>
+    <script src="JS.js" rel="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      
+
+
+    </style>
+
+    <script>
+       
+
+        
+    </script>
+</head>
+
+<body>
+
+    <div class="container divheight100">
+
+        <div class="row divheight100 contentCenter">
+
+            <!-- <div class="col-sm-1 col-md-1"></div> -->
+            <div class="col-sm-11 col-md-11 m-5 " style="height: 75%;">
+
+                <div class="row text-center divheight100 wrapper" id="log">
+                    <div class="col-sm-4 col-md-4  bdRightRadius color m-d-block" style="display: none;" id="side1">
+
+                        <div class="col-sm-12 col-md-12" style="height: 5%;"></div>
+
+                        <h3 class="text-white">Hello, Friends!</h3>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <h6 class="text-white">Enter your personal details <br>
+                            and start journey with us</h6>
+
+                        <div class="col-sm-12 col-md-12" style="height: 6%;"></div>
+
+                        <div class="row">
+                            <div class="col-2 col-sm-2 col-md-2"></div>
+
+                            <div class="col-8 col-sm-8 col-md-8 color rounded-pill border border-light contentCenter">
+                                <button type="button" class="btn btn-none text-white" onclick="signin()">SIGN
+                                    UP</button>
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-8 col-md-8 bg-white bdLeftRadius">
+                        <div class="form-row" style="height: 9vh;">
+                        <div class="col-2 "></div>
+                        <div class="col-8" role="alert">
+                            <div class="row alert alert-danger fade show" id="Loginalert">
+                                <div class="col-10 float-left"><strong>Login Failed !</strong>&nbsp; You should check Email or Password. </div>
+                                <div class="col-2 float-left"><button type="button" class="close " data-dismiss="alert" aria-label="Close" id="alertbtn">
+                                  <span aria-hidden="true">&times;</span>
+                                </button></div>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                        </div>
+
+                        <h3 class="text-info fontcolor">Sign in to Diprella</h3>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <i><img src="f.png" height="40px" width="42px"></i>&nbsp;
+                        <i><img src="g.png" height="40px" width="45px"></i>
+                        <i><img src="in.png" height="40px" width="45px"></i>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <h6 class="text-muted">or use your email account</h6>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+
+                        <form class="needs-validation1" novalidate>
+                            <div class="form-row">
+                                <div class="col-2 col-sm-2 col-md-2"></div>
+                              <div class="col-8 col-sm-8 col-md-8 contentLeft">
+                                  <div class="col-12">
+                                <!-- <i class="far fa-envelope text-grey" ></i> -->
+                                    <input type="email" class="form-control bg-light" id="lemail" placeholder="Email" oninput="LoginEmail()"  required>
+                                    <div class="invalid-feedback" id="lemailValidation">
+                                        *Please Fill Email Address!
+                                    </div>
+                                    
+                                </div>
+                              </div>
+                              <div class="col-2 col-sm-2 col-md-2"></div>                              
+                            </div>
+                            <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="ler"></div>
+
+                            <div class="form-row">
+                                <div class="col-2 col-sm-2 col-md-2"></div>
+                              <div class="col-8 col-sm-8 col-md-8 contentLeft">
+                                  <div class="col-12 ">
+                                <!-- <i class="far fa-envelope text-grey" ></i> -->
+                                    <input type="password" class="form-control bg-light" id="lpass" placeholder="Password"  required>
+                                    <div class="invalid-feedback" id="lpassValidation">
+                                        *Please Fill Password!
+                                    </div>
+                                    
+                                </div>
+                              </div>
+                              <div class="col-2 col-sm-2 col-md-2"></div>                              
+                            </div>
+
+                            <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="err"></div>
+
+                            <div class="row">
+                                <div class=" col-1 col-sm-1 col-md-1"></div>
+
+                                <div class="col-10 col-sm-10 col-md-10">
+                                    <p class="text-muted ">Forget your password?</p>
+                                </div>
+                                <div class="col-1 col-sm-1 col-md-1"></div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4"></div>
+
+                                <div class="col-4 col-sm-4 col-md-4 color rounded-pill contentCenter">
+                                    <button type="button" class="btn btn-none text-white contentCenter" id="lgbtn" >SIGN
+                                        IN</button>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4"></div>
+                            </div>                            
+                        </form>
+                        <!-- <form class="needs-validation" novalidate>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+
+                                    <div class="col-8 col-sm-8 col-md-8 bg-light contentCenter">
+                                        <i class="far fa-envelope text-grey" style=""></i>
+                                        <input type="email" name="lemail" id="lemail"
+                                            class="form-control border-0 bg-light" placeholder="Email"
+                                            onblur="LoginEmail()" required /><br />
+                                    </div>
+
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="ler"></div>
+                                <div class="row">
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+
+                                    <div class="col-8 col-sm-8 col-md-8 bg-light contentCenter">
+                                        <i class="far fa-lock " style=""></i>
+                                        <input type="password" name="lpass" id="lpass"
+                                            class="form-control border-0 bg-light" placeholder="Password"
+                                            onblur="LoginPass()" /><br />
+                                    </div>
+
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+                                </div>
+                                <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="err"></div>
+
+                                <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+                                <div class="row">
+                                    <div class=" col-1 col-sm-1 col-md-1"></div>
+
+                                    <div class="col-10 col-sm-10 col-md-10">
+                                        <p class="text-muted ">Forget your password?</p>
+                                    </div>
+                                    <div class="col-1 col-sm-1 col-md-1"></div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                                <div class="row">
+                                    <div class="col-4 col-sm-4 col-md-4"></div>
+
+                                    <div class="col-4 col-sm-4 col-md-4 color rounded-pill contentCenter">
+                                        <button type="button" class="btn btn-none text-white cont" onclick="save()">SIGN
+                                            IN</button>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4"></div>
+                                </div>
+
+                            </div>
+                        </form> -->
+
+
+                    </div>
+                    <div class="col-sm-4 col-md-4  bdRightRadius color m-d-none"  id="side1">
+
+                        <div class="col-sm-12 col-md-12" style="height: 27%;"></div>
+
+                        <h3 class="text-white">Hello, Friends!</h3>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <h6 class="text-white">Enter your personal details <br>
+                            and start journey with us</h6>
+
+                        <div class="col-sm-12 col-md-12" style="height: 6%;"></div>
+
+                        <div class="row">
+                            <div class="col-2 col-sm-2 col-md-2"></div>
+
+                            <div class="col-8 col-sm-8 col-md-8 color rounded-pill border border-light contentCenter">
+                                <button type="button" class="btn btn-none text-white" onclick="signin()">SIGN
+                                    UP</button>
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-12" style="height: 20%;"></div>
+
+                    </div>
+                </div>
+
+
+                <div class="row text-center divheight100" id="reg" style="display: none;">
+
+                    <div class="col-sm-4 col-md-4  bdLeftRadius color" id="side2">
+
+                        <div class="col-sm-12 col-md-12" style="height: 20%;"></div>
+
+                        <h3 class="text-white">Welcome Back!</h3>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <h6 class="text-white">To keep connected with us please<br>
+                            login with your oersonal info</h6>
+
+                        <div class="col-sm-12 col-md-12" style="height: 6%;"></div>
+
+                        <div class="row">
+                            <div class="col-2 col-sm-2 col-md-2"></div>
+
+                            <div class="col-8 col-sm-8 col-md-8 color rounded-pill border border-light contentCenter">
+                                <button type="button" class="btn btn-none text-white" onclick="login()">SIGN IN</button>
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2"></div>
+                        </div>
+                        <div class="col-sm-12 col-md-12" style="height: 20%;"></div>
+
+                    </div>
+
+                    <div class="col-sm-8 col-md-8 bg-white bdRightRadius">
+
+                        <h3 class="text-info fontcolor">Create Account</h3>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <i><img src="f.png" height="40px" width="42px"></i>&nbsp;
+                        <i><img src="g.png" height="40px" width="45px"></i>
+                        <i><img src="in.png" height="40px" width="45px"></i>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <h6 class="text-muted">or use your email for registration</h6>
+
+                        <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+                        <!-- oninput='cpass.setCustomValidity(cpass.value != pass.value ? "Passwords do not match." : "")' -->
+
+                        <form class="needs-validation2" novalidate oninput='cpass.setCustomValidity(cpass.value != pass.value ? "Passwords do not match." : "")'>
+                            <div class="form-row">
+                                <div class="col-2 col-sm-2 col-md-2"></div>
+                              <div class="col-8 col-sm-8 col-md-8 contentLeft">
+                                  <div class="col-12">
+                                <!-- <i class="far fa-envelope text-grey" ></i> -->
+                                    <input type="text" class="form-control bg-light" id="name" placeholder="Name" pattern="^[A-Za-z -]+$" oninput="namecheck()" onblur="upperCase(this)" required>
+                                    <div class="invalid-feedback" id="nameValidation">
+                                        *Please Fill UserName!
+                                    </div>
+                                    
+                                </div>
+                              </div>
+                              <div class="col-2 col-sm-2 col-md-2"></div>                              
+                            </div>
+
+                            <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="nameer"></div>
+
+                            <div class="form-row">
+                                <div class="col-2 col-sm-2 col-md-2"></div>
+                              <div class="col-8 col-sm-8 col-md-8 contentLeft">
+                                  <div class="col-12">
+                                <!-- <i class="far fa-envelope text-grey" ></i> -->
+                                    <input type="email" class="form-control bg-light" id="email" placeholder="Email" oninput="emailcheck()" required>
+                                    <div class="invalid-feedback" id="emailValidation">
+                                        *Please Fill Email Address!
+                                    </div>
+                                    <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" -->
+                                    
+                                </div>
+                              </div>
+                              <div class="col-2 col-sm-2 col-md-2"></div>                              
+                            </div>
+
+                            <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="emailer"></div>
+
+                            <div class="form-row">
+                                <div class="col-2 col-sm-2 col-md-2"></div>
+                              <div class="col-8 col-sm-8 col-md-8 contentLeft">
+                                  <div class="col-12 ">
+                                <!-- <i class="far fa-envelope text-grey" ></i> -->
+                                    <input type="password" class="form-control bg-light" id="pass" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$" oninput="passcheck()" required>
+                                    <div class="invalid-feedback" id="passValidation">
+                                        *Please Fill Password!
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="col-2 col-sm-2 col-md-2"></div>                              
+                            </div>
+
+                            <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="passer"></div>
+
+                            <div class="form-row">
+                                <div class="col-2 col-sm-2 col-md-2"></div>
+                              <div class="col-8 col-sm-8 col-md-8 contentLeft">
+                                  <div class="col-12">
+                                <!-- <i class="far fa-envelope text-grey" ></i> -->
+                                    <input type="password" class="form-control bg-light" id="cpass" placeholder="Confirm Password" oninput="cpasscheck()" required>
+                                    <div class="invalid-feedback" id="cpassValidation">
+                                        *Please Fill Confirm Password!
+                                    </div>                                    
+                                </div>
+                              </div>
+                              <div class="col-2 col-sm-2 col-md-2"></div>                              
+                            </div>
+
+                            <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="empty"></div>
+                                                        
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4"></div>
+
+                                <div class="col-4 col-sm-4 col-md-4 color rounded-pill contentCenter">
+                                    <button type="button" class="btn btn-none text-white contentCenter" id="rgbtn">SIGN
+                                        UP</button>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4"></div>
+                            </div>                            
+                          </form>
+
+                        <!-- <form>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+
+                                    <div class="col-8 col-sm-8 col-md-8 bg-light contentCenter">
+                                        <i class="far fa-user text-grey" style=""></i>
+                                        <input type="text" name="name" id="name" class="form-control border-0 bg-light"
+                                            placeholder="Name" onblur="namecheck()" /><br />
+                                    </div>
+
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+                                </div>
+                                <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="nameer"></div>
+                                <div class="row">
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+
+                                    <div class="col-8 col-sm-8 col-md-8 bg-light contentCenter">
+                                        <i class="far fa-envelope text-grey" style=""></i>
+                                        <input type="email" name="email" id="email"
+                                            class="form-control border-0 bg-light" placeholder="Email"
+                                            onblur="emailcheck()" /><br />
+                                    </div>
+
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+                                </div>
+                                <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="emailer"></div>
+                                <div class="row">
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+
+                                    <div class="col-8 col-sm-8 col-md-8 bg-light contentCenter">
+                                        <i class="far fa-lock " style=""></i>
+                                        <input type="password" name="pass" id="pass"
+                                            class="form-control border-0 bg-light" placeholder="Password"
+                                            onblur="passcheck()" /><br />
+                                    </div>
+
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+                                </div>
+                                <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="passer"></div>
+
+                                <div class="row">
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+
+                                    <div class="col-8 col-sm-8 col-md-8 bg-light contentCenter">
+                                        <i class="far fa-lock " style=""></i>
+                                        <input type="password" name="cpass" id="cpass"
+                                            class="form-control border-0 bg-light" placeholder="Confirm Password"
+                                            onblur="cpasscheck()" onkeyup="checkPass()" /><br />
+                                    </div>
+
+                                    <div class="col-2 col-sm-2 col-md-2"></div>
+                                </div>
+                                <div class="col-sm-12 col-md-12" style="height: 1.7vmax;" id="empty"></div>
+
+                                <div class="col-sm-12 col-md-12" style="height: 3%;"></div>
+
+
+
+                                <div class="row">
+                                    <div class="col-4 col-sm-4 col-md-4"></div>
+
+                                    <div class="col-4 col-sm-4 col-md-4 color rounded-pill contentCenter">
+                                        <button type="button" class="btn btn-none text-white cont"
+                                            onclick="store()">SIGN UP</button>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-4"></div>
+                                </div>
+
+                            </div>
+                        </form> -->
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <div class="col-sm-1 col-md-1"></div> -->
+
+
+        </div>
+
+        <!-- <div class="row divheight100 m-5"  style="display: none;" >
+                
+                 <div class="col-sm-1 col-md-1"></div>
+                <div class="col-sm-11 col-md-11  " style="height: 80%;" > -->
+
+
+
+        <!-- </div>
+                <div class="col-sm-1 col-md-1"></div> 
+                
+                
+            </div> -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
